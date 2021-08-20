@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.mt8 {
+    margin-top: 8px !important;
+}
+
+.mt16 {
+    margin-top: 16px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col2 {
+    width: 50%;
+}
+
+.col3 {
+    width: 33.3333%;
+}
+
+.pull-right {
+    float: right;
+}
+
+.btn {
+    padding: 8px 16px;
+    font-size: 15px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.nav {
+    font-size: 0;
+    display: inline-block;
+}
+
+.nav > li {
+    display: inline-block;
+}
+
+.btn:hover,
+.subnav li:hover a,
+.nav > li:hover > a {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
+
+.nav > li > a {
+    box-sizing: initial;
+    display: block;
+    padding: 0 24px;
+    height: 46px;
+    font-size: 15px;
+    line-height: 46px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav .ti-angle-down {
+    font-size: 12px;
+}
+
+.subnav {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+li:hover .subnav {
+    display: block;
+}
+
+.subnav a {
+    box-sizing: initial;
+    font-size: 15px;
+    padding: 0 12px;
+    line-height: 38px;
+    height: 38px;
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+.mobile-menu-btn,
+.search-btn {
+    float: right;
+    height: 46px;
+    color: #fff;
+    padding: 0 21px;
+}
+
+.mobile-menu-btn .ti-menu,
+.search-btn .ti-search {
+    line-height: 46px;
+    font-size: 20px;
+}
+
+.mobile-menu-btn {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.search-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.mobile-menu-btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(../img/slider-img.jpg) no-repeat center / cover;
+}
+
+.slider-text {
+    position: absolute;
+    width: 100%;
+    bottom: 32px;
+    text-align: center;
+    color: red;
+    text-shadow: 0 0 1px red;
+}
+
+.slider-text .text-heading {
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.slider-text .text-description {
+    font-size: 15px;
+}
+
+#content {
+
+}
+
+.content-section {
+    padding: 64px 16px 112px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.content-heading {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.content-sub-heading {
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+    padding: 15px 0;
+    opacity: 0.6;
+}
+
+.content-about {
+    text-align: justify;
+    line-height: 1.4;
+}
+
+.member-list {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.member-name {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.member-img {
+    width: 154px;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+.tour-section {
+    background-color: #000;
+    color: #fff;
+}
+
+.ticket-list {
+    margin-top: 18px;
+}
+
+.ticket-item {
+    padding: 10px 16px;
+    background-color: #fff;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ticket-item .ticket-time {
+    color: #757575;
+}
+
+.ticket-item .sold-out {
+    color: #fff;
+    background-color: red;
+    padding: 3px 8px;
+    margin-left: 16px;
+}
+
+.ticket-item .quantity {
+    background-color: #000;
+    float: right;
+    padding: 2px 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    color: #fff;
+    margin-top: -2px;
+}
+
+.place-list {
+    margin-top: 16px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-content {
+    padding: 16px;
+    color: #000;
+    background-color: #fff;
+    font-size: 15px;
+}
+
+.place-content .place-name {
+    font-weight: 600;
+}
+
+.place-content .place-time {
+    padding: 15px 0;
+    opacity: 0.6;
+}
+
+.place-content .place-description {
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.contact-body {
+    padding-top: 32px;
+}
+
+.contact-body .contact-info {
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+.contact-body .contact-info a {
+    color: #2837f2;
+    opacity: 0.6;
+}
+
+.contact-body .contact-info a:hover {
+    color: #2837f2;
+    opacity: 1;
+}
+
+.contact-body .contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form input {
+    padding: 8px;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.poster-img {
+    width: 100%;
+    display: block;
+}
+
+#footer {
+    width: 100%;
+}
+
+.footer-content {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    text-align: center;
+    color: #757575;
+}
+
+.social-icon {
+    font-size: 24px;
+}
+
+.copy-right {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.copy-right a {
+    color: #757575;
+}
+
+.social-icon i:hover,
+.copy-right a:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.modal {
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal-body {
+    width: 900px;
+    position: relative;
+    background-color: #fff;
+    animation: ModalFadeIn ease 0.5s;
+    max-width: calc(100% - 32px);
+}
+
+.modal-header {
+    background-color: #009688;
+    color: #fff;
+    font-size: 30px;
+    padding: 42px 0;
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
+.modal-header .ti-bag {
+    margin-right: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    color: #fff;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+    color: #ccc;
+}
+
+.modal-footer,
+.modal-content {
+    padding: 0 16px;
+}
+
+.modal-label {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.modal-content input {
+    font-size: 15px;
+    padding: 8px;
+    width: 100%;
+}
+
+.submit-btn {
+    margin-top: 16px;
+    padding: 16px 0;
+    background-color: #009688;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-footer a:hover,
+.submit-btn:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.modal-footer {
+    float: right;
+    margin: 30px 0;
+    font-size: 15px;
+}
+
+.modal-footer a {
+    color: blue;
+}
+
+@keyframes ModalFadeIn {
+    from {
+        transform: translateY(-150px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
